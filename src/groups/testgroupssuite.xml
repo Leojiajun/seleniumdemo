@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default suite" verbose="2" preserve-order="true">
+  <test name="Default test">
+  	<groups>
+	  	<define name="submodule1"></define>
+	  	<define name="submodule2"></define>
+	  	<define name="submodule3"></define>
+	  	
+	  	<define name="medule1">
+	  		<include name="submodule1"/>
+	  		<include name="submodule2"/>
+	  	</define>
+  	
+	  	<define name="medule2">
+	  		<include name="submodule2"/>
+	  		<include name="submodule3"/>
+	  	</define>
+  	
+  		<run>
+  			<include name="medule1"></include>
+  			<include name="medule2"></include>
+  		</run>
+  	</groups>
+  	
+   
+    <classes>
+      <class name="groups.testgroups"/>
+    </classes>
+  </test> <!-- Default test -->
+</suite> <!-- Default suite -->

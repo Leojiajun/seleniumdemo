@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [caihongdemo]">
+  <parameter name="data" value="/Tools/test.properties"/>
+  <parameter name="locator" value="/Tools/locators.properties"/>
+  <test name="Default test(failed)">
+    <classes>
+      <class name="caihongdemo.caihong">
+        <methods>
+          <include name="report"/>
+          <include name="release"/>
+          <include name="chukujilu"/>
+          <include name="startFirefox"/>
+          <include name="register"/>
+        </methods>
+      </class> <!-- caihongdemo.caihong -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [caihongdemo] -->

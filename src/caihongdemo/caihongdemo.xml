@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="caihongdemo">
+  <parameter name="data" value="/Tools/test.properties"/>
+  <parameter name="locator" value="/Tools/locators.properties"/>
+  <test name="Default test" preserve-order="true">
+    <classes>
+      <class name="caihongdemo.caihong">
+      <methods>
+      <include name="register"/>
+      <include name="report"/>
+      <include name="chukujilu"/>
+      </methods>
+      </class>
+    </classes>
+  </test> <!-- Default test -->
+</suite> <!-- Default suite -->

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="seleniumdemo">
+  <parameter name="data" value="/Tools/test.properties"/>
+  <parameter name="locator" value="/Tools/locators.properties"/>
+  <test name="Default test" preserve-order="true">
+    <classes>
+      <class name="com.Properties.Practice2OnTestng">
+      <methods>
+      <include name="acceddMail"/>
+      </methods>
+      </class>
+    </classes>
+  </test> <!-- Default test -->
+</suite> <!-- Default suite -->

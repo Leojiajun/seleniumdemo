@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default suite" verbose="2" preserve-order="true">
+<parameter name="platform" value="chrome"/>
+  <test name="Default test">
+  	<groups>
+	  	<define name="submodule1"></define>
+	  	<define name="submodule2"></define>
+	  	<define name="submodule3"></define>
+	  	<define name="submodule4"></define>
+	  	<define name="browser"></define>
+	  	
+	  	<define name="FF">
+	  		<include name="submodule1"/>
+	  		<include name="submodule2"/>
+	  	</define>
+  	
+	  	<define name="chrome">
+	  		<include name="submodule3"/>
+	  		<include name="submodule4"/>
+	  	</define>
+  	
+  		<run>
+  			<include name="browser"></include>
+  			<include name="chrome"></include>
+  		</run>
+  	</groups>
+  	
+   
+    <classes>
+      <class name="groups.testgroupsBrowsers"/>
+    </classes>
+  </test> <!-- Default test -->
+</suite> <!-- Default suite -->
