@@ -4,19 +4,27 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import launch.Browsers;
+import launch.BrowsersType;
+
 public class testalert {
+	 WebDriver driver;
+	@BeforeClass
+	public void browserDriver(){
+		Browsers browser = new Browsers(BrowsersType.chrome);
+		 driver = browser.driver;
+	}
+	
 	@Test
 	//alert确定
 	public void test() throws InterruptedException{
-		WebDriver driver = new FirefoxDriver();
 		driver.get("file:///E:/自动化测试/html文件/testpage.html");
 		//WebDriverWait wait = new WebDriverWait(driver, 10);
 		//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/input[1]")));
@@ -30,7 +38,7 @@ public class testalert {
     @Test
     //confirm
     public void testconfirm() throws InterruptedException{
-    	WebDriver driver = new FirefoxDriver();
+    
 		driver.get("file:///E:/自动化测试/html文件/testpage.html");
 		//WebDriverWait wait = new WebDriverWait(driver, 10);
 		//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/input[2]")));
@@ -43,10 +51,10 @@ public class testalert {
 		Assert.assertTrue(AA.equals("这是Confirmation"));
 		
     }
-    @Test
+    //@Test
     //prompt
     public void testprompt() throws InterruptedException{
-    	WebDriver driver = new FirefoxDriver();
+    
     	driver.get("file:///E:/自动化测试/html文件/testpage.html");
     	WebDriverWait wait = new WebDriverWait(driver, 10);
     	wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("html/body/input[3]")));
@@ -60,10 +68,10 @@ public class testalert {
     	Assert.assertTrue(pp.equals("这是Prompt"));
     }
     
-    @Test
+    //@Test
     //frame切换
     public void testFram() throws InterruptedException{
-    	WebDriver driver = new FirefoxDriver();
+    
     	driver.get("file:///E:/自动化测试/html文件/fram/frame.html");
     	//切换到middlefram
     	WebDriver dd = driver.switchTo().frame("middleframe");
@@ -77,9 +85,9 @@ public class testalert {
     	cc.findElement(By.id("kw")).sendKeys("555");	
     }
     
-	@Test
+	//@Test
 	public void testselect() throws InterruptedException{
-		WebDriver driver = new FirefoxDriver();
+		
 		driver.get("file:///E:/自动化测试/html文件/select.html");
 		driver.manage().window().maximize();
 		//select

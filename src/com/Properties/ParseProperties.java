@@ -34,7 +34,7 @@ public ParseProperties(String propertiespath){
 
 }
 	public String getValue(String keyname){
-		value = pro.getProperty(keyname).trim();
+		value = pro.getProperty(keyname).trim();  //.getProperty方法可以从键值中获取value  key和value可以用  等号和冒号分开
 		try {
 			value = new String(value.getBytes("UTF-8"),"UTF-8");
 		} catch (UnsupportedEncodingException e) {
@@ -45,7 +45,7 @@ public ParseProperties(String propertiespath){
 	}
 	
 	public static void main(String[] args){
-		ParseProperties a = new ParseProperties("C:/Users/user/workspace/selenuimdemo/Tools/test.properties");
+		ParseProperties a = new ParseProperties("C:/Users/jiajun.wu/workspace/seleniumdemo/Tools/test.properties");
 		System.out.println(a.getValue("password"));
 	}
 }

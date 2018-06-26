@@ -8,7 +8,6 @@
           <include name="login163mail"/>
           <include name="restriveMailsIn"/>
           <include name="inital"/>
-          <include name="release"/>
         </methods>
       </class> <!-- Mail163 -->
     </classes>

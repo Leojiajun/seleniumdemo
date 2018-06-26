@@ -7,9 +7,10 @@ public class mytest1 {
 	public static void main(String[] args){
 	  FirefoxDriver driver = new FirefoxDriver();
 	  driver.get("http://www.baidu.com");
-	  driver.findElementById("kw").sendKeys("ÄãºÃ");
+	  driver.findElementById("kw").sendKeys("ï¿½ï¿½ï¿½");
+	  
 	  //driver.findElementById("su").click();
-	  driver.findElement(By.cssSelector("input[value='°Ù¶ÈÒ»ÏÂ']")).click();
+	  driver.findElement(By.cssSelector("input[value='ï¿½Ù¶ï¿½Ò»ï¿½ï¿½']")).click();
 	  driver.quit();
 	  System.out.println("------------------");
 	  

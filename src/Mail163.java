@@ -28,6 +28,10 @@ public class Mail163 {
 	}
 	public void login163mail(){
 		driver.get("http://mail.163.com/");
+		String title = driver.getTitle();
+		System.out.println(title);
+		String url = driver.getCurrentUrl();
+		System.out.println(url);	
 		du.waitFor(3000);
 		driver.switchTo().frame("x-URS-iframe");//切换iframe
 		du.what("username163Mail").sendKeys("wujiajun318");
